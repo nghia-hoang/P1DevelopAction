@@ -8,11 +8,11 @@ COPY . /app
 
 ## Step 3:
 #RUN pip install -i https://pypi.org/simple flask
-RUN pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
+RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/requirements.txt
 ## Step 4:
 # Ensure that the database is initialized with the pre-defined posts in the init_db.py file
-COPY ./techtrends/init_db.py ./
-RUN python init_db.py
+#COPY ./techtrends/init_db.py ./
+RUN python ./techtrends/init_db.py
 
 # Expose port 80
 EXPOSE 3111
