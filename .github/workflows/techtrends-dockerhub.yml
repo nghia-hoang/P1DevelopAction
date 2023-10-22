@@ -21,7 +21,7 @@ jobs:
           tags: nghiahv1/techtrends:latest
 
       - name: Login to DockerHub
-        uses: techtrends-dockerhub.yml
+        uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
