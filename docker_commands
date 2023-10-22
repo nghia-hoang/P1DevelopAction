@@ -1,0 +1,29 @@
+## Docker commands used to build the application 
+docker build -t nghiahv1/techtrends .
+
+## Docker commands used to run the application
+docker run  nghiahv1/techtrends:latest
+
+## Docker commands used to get the application logs
+# docker container ls -> to get CONTAINER ID 
+docker logs 82c0bb64118c
+
+## Logs from the container running the TechTrends application
+nghia@ubuntu:~/Downloads/nd064_course_1-main/project/techtrends$ docker run -p 7111:3111 nghiahv1/techtrends:latest
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+172.17.0.1 - - [22/Oct/2023 12:37:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Oct/2023 12:37:30] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [22/Oct/2023 12:37:30] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [22/Oct/2023 12:37:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Oct/2023 12:37:50] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [22/Oct/2023 12:37:50] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [22/Oct/2023 12:38:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [22/Oct/2023 12:38:58] "GET /static/css/main.css HTTP/1.1" 200 -
+
