@@ -8,7 +8,8 @@ COPY . /app
 
 ## Step 3:
 #RUN pip install -i https://pypi.org/simple flask
-RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/requirements.txt
+#RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/requirements.txt
+RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/requirements.txt sqlite3
 ## Step 4:
 # Ensure that the database is initialized with the pre-defined posts in the init_db.py file
 #COPY ./techtrends/init_db.py ./
