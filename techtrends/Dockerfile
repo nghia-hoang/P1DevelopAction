@@ -6,7 +6,7 @@ WORKDIR /app
 # Copy source code to working directory
 COPY . /app
 # Ensure that the database is initialized with the pre-defined posts in the init_db.py file
-COPY init_db.py ./
+COPY ./techtrends/init_db.py ./
 RUN python init_db.py
 ## Step 3:
 # Install packages from requirements.txt
