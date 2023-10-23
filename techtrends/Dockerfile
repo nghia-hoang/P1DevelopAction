@@ -5,7 +5,7 @@ WORKDIR /app
 ## Step 2:
 # Copy source code to working directory
 COPY . /app
-
+COPY ./techtrends/schema.sql /app
 ## Step 3:
 #RUN pip install -i https://pypi.org/simple flask
 #RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/requirements.txt
