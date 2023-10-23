@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir --trusted-host pypi.python.org -r ./techtrends/re
 ## Step 4:
 # Ensure that the database is initialized with the pre-defined posts in the init_db.py file
 #COPY ./techtrends/init_db.py ./
-run cat ./techtrends/init_db.py
+RUN echo "Current working directory:" && pwd && echo "Contents of the current directory:" && ls
 RUN python ./techtrends/init_db.py
 
 # Expose port 80
