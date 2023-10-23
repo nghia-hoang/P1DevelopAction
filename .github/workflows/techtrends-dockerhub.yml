@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install SQLite
+        run: sudo apt install sqlite3
       -
         name: Checkout
         uses: actions/checkout@v4
