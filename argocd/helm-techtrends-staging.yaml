@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: techtrends-staging
+spec:
+  project: default
+  source:
+    helm:
+      chart: techtrends
+      repository: https://github.com/techtrends-helm-chart/charts.git
+      values:
+        - values-staging.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: techtrends-staging
