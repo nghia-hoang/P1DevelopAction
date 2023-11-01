@@ -21,4 +21,4 @@ EXPOSE 3111
 
 ## Step 5:
 # Run app.py at container launch
-CMD ["python", "app.py"]
+CMD ["python", "techtrends/app.py"]
