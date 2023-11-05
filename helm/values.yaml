@@ -3,7 +3,7 @@ service:
   port: 4111
   targetPort: 3111
   protocol: TCP
-  type: ClusterIP
+  type: LoadBalancer
 image:
   repository: nghiahv1/techtrends
   tag: latest
