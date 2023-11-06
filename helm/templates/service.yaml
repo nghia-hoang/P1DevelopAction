@@ -8,7 +8,7 @@ spec:
   ports:
   # port bên ngoài của pods mà các pods có thể giao tiếp được với nhau
   - port: 4111
-  # port target với 8100 của deployment
+  # port target với 3111 của deployment
     targetPort: 3111
     protocol: TCP
     name: http
