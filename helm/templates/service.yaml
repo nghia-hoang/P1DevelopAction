@@ -5,10 +5,12 @@ metadata:
   namespace: sandbox
 spec:
   type: LoadBalancer
-  selector:
-    app: techtrends
   ports:
-    name: http
-    port: 4111
+  # port bên ngoài của pods mà các pods có thể giao tiếp được với nhau
+  - port: 4111
+  # port target với 8100 của deployment
     targetPort: 3111
-    protocol: {{ .Values.service.protocol }}
+    protocol: TCP
+    name: http
+  selector:
+    app: techtrends    
